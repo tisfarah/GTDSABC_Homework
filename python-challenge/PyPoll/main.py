@@ -2,15 +2,15 @@
 import os
 import csv 
 
-budget_file = os.path.join('Resources', 'election_data.csv')
+election_file = os.path.join('Resources', 'election_data.csv')
 
 # initializing empty list to put in the separate list based on column headers
 voter= []
 county = []
 candidate = []
 
-#import the file path as a csvfile and delimit by commas 
-with open(budget_file, newline = '') as csvfile:
+#import the file path as a csvfile and delimit by commas
+with open(election_file, newline = '') as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
    
     
@@ -26,15 +26,15 @@ with open(budget_file, newline = '') as csvfile:
 total_votes = len(voter)
 
 # looked up how to extract unique values from list, set was most recommended 
-candidate = set(candidate)
-candidate =list(candidate)
+candidate2 = set(candidate)
+candidate2 =list(candidate)
 #finding the total number each candidate won by looping through if statement and initializing counts 
 
 Khan = 0
 OTooley = 0
 Correy = 0
 Li =  0
-for i in candidate:
+for i in candidate2:
     if i == "Khan":
         Khan += 1
     elif i == "O'Tooley":
