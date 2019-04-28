@@ -5,3 +5,4 @@ Repository for Bootcamp Homework <br>
 **Week 3**: Python  <br>
 **Week 4**: Pandas  <br>
 **Week 5**: MatPlotLib  <br>
+**Week 6**: Python API  <br>
