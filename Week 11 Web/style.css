@@ -1,8 +1,10 @@
-.box {
-  height: 400px;
-  padding: 20px;
-  color: #fff;
-  background: deepskyblue;
+body {
+  background: lightgray;
 }
-
-
+div {
+  background: white;
+  margin-top: 50px;
+}
+nav {
+  background: white;
+}
