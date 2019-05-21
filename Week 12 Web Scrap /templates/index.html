@@ -11,14 +11,42 @@
 
 <body>
   <div class="container-fluid">
+
     <div class="jumbotron text-center">
       <h1>Mission To Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <h3>Latest Mars News</h3>
-    <h4> {{mission_data.mars_title}}</h4>
-    <p> {{mission_data.mars_body}}</p>
-    <h3>Featured Mars Image</h3>
+
+    <div class="row">
+        <!--First and Only Column in this Row-->
+        <div class="col-md-12">
+            <h3>Latest Mars News</h3>
+            <h4> {{mission_data.mars_title}}</h4>
+            <p> {{mission_data.mars_body}}</p>
+        </div>
+      </div>
+
+
+      <div class="row">
+          <!--First of Two Columns-->
+          <div class="col-md-8">
+              <h3>Featured Mars Image</h3>
+              <img src="{{mission_data.featured_image_url}}" width = 75%> </div>
+          <!--Second of Two Columns-->
+          <div class="col-md-4">
+            <h3>Current Weather on Mars</h3>
+            <p> {{mission_data.twitter_weather}}</p>
+            <h3>Mars Facts</h3>
+            <p> {{mission_data.facts_table | safe}}</p>
+          </div>
+        </div>
+
+
+
+
+  
+
+
   </div>
 </body>
 

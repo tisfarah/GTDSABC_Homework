@@ -27,7 +27,7 @@ def scrape():
     mission_data = mongo.db.mission_data
 
     # Run the scrape function
-    mars_data = scrape_mm.scrape_info_mars()
+    mars_data = scrape_mm.all_data()
 
     # Update the Mongo database using update and upsert=True
     mongo.db.mission_data.update({}, mars_data, upsert=True)
