@@ -43,6 +43,11 @@ submit.on("click", function() {
 
   var filteredData = tableData.filter(person => person.datetime === trueInput);
 
-  console.log(filteredData);
+console.log(filteredData);
 
+tbody.text("")
+filteredData.forEach(DisplayTableRowsLooped)
 });
+
+
+// create dropdown menu 
