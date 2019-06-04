@@ -17,9 +17,9 @@ function DisplayTableRowsLooped(someData){
 // Search through date/time column to filter table 
 
 // filter function 
-function filterDate(DT) {
-    return DT.datetime === trueInput
-}; 
+// function filterDate(DT) {
+//     return DT.datetime === trueInput
+// }; 
 // // Select the submit button
 var submit = d3.select("#filter-btn");
 
@@ -34,15 +34,35 @@ submit.on("click", function() {
 //   // Get the value property of the input element
   var inputValue = inputElement.property("value");
 
-  trueInput = inputValue;
+
+  // console.log(inputValue);
+  // console.log(tableData);
 
 
-  console.log(inputValue);
-  console.log(tableData);
+  // var filteredData = tableData.filter(person => person.datetime === inputValue);
+
+  // console.log(filteredData);
 
 
-  var filteredData = tableData.filter(person => person.datetime === trueInput);
+  // Declare variables 
+  var input, filter, table, tr, td, i, txtValue;
+  input = inputElement.property("value");
+  filter = input.value.toUpperCase();
+  table = d3.select("tbody");
+  tr = table.getElementsByTagName("tr");
 
-  console.log(filteredData);
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+
 
 });
