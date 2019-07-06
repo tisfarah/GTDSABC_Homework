@@ -41,7 +41,7 @@ submit.on("click", function() {
   console.log(tableData);
 
 
-  var filteredData = tableData.filter(person => person.datetime === trueInput);
+var filteredData = tableData.filter(person => person.datetime === trueInput);
 
 console.log(filteredData);
 
